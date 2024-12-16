@@ -1,6 +1,6 @@
 const express = require('express')
 const cors = require('cors')
-const postRoutes = require('../routes/posts')
+const taskRoutes = require('../routes/tasks')
 const authRoutes = require('../routes/auth')
 const userRoutes = require('../routes/users')
 const helmet = require('helmet')
@@ -13,7 +13,7 @@ module.exports = async ({ app }) => {
     app.use(cors());            // cros-origin middleware
 
     // setup routes
-    app.use('/api', postRoutes);
+    app.use('/api', taskRoutes);
     app.use('/api/user/', authRoutes);
     app.use('/api', userRoutes);
 

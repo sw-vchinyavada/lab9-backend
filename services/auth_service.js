@@ -8,6 +8,7 @@ module.exports = class AuthService {
 
     static async login(credentials) {
         // check if data is valid
+        console.log(credentials);
         const { error } = loginValidation(credentials);
         if (error)
             return error_json(400, error.details[0].message);

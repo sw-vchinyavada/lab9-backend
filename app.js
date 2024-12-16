@@ -15,5 +15,5 @@ async function startServer(port, db_url) {
 
 startServer(
     process.env.PORT || 4000,
-    process.env.DB_URL || "http://127.0.0.1/blog-api"
+    process.env.DB_URL
 );
