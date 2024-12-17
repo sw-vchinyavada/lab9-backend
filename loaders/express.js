@@ -1,4 +1,5 @@
 const express = require('express')
+const serverless = require("serverless-http");
 const cors = require('cors')
 const taskRoutes = require('../routes/tasks')
 const authRoutes = require('../routes/auth')
@@ -27,5 +28,6 @@ module.exports = async ({ app }) => {
         });
     })
 
-    return app;
+    return serverless(app);
+    //return app;
 }
