@@ -1,4 +1,4 @@
-# Secure-Express-REST-API
+# ISE7106 LAB9 BACKEND
 
 This is a REST Api developed with Node.js ,Express.js, and MongoDB. It includes both Authentication and Authorization
 using JWT tokens, it is meant to be as Simple and Secure as possible.
