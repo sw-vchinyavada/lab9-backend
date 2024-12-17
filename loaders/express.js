@@ -10,11 +10,6 @@ module.exports = async ({ app }) => {
 
     app.use(helmet())           // security headers middleware
     app.use(express.json());    // body parser
-    app.use(cors({
-        origin: '*',
-        preflightContinue: true,
-    }));            // cros-origin middleware
-
 
     // setup routes
     app.use('/api', taskRoutes);
