@@ -13,6 +13,7 @@ module.exports = class TaskService {
 
         // assigning user to the task	
         data.author_id = session.user_id;
+        data.title = data.title.toUpperCase();
 
         const task = await Task.create(data);
         if (!task)
@@ -40,6 +41,7 @@ module.exports = class TaskService {
         if (session.role == "moderator" || session.role == "admin") {
             // make sure author_id is not modified
             data.author_id = session.user_id;
+            data.title = data.title.toUpperCase();
             // if everything is ok edit the task
             var res = await Task.updateOne({ _id: id }, data);
 

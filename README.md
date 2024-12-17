@@ -33,8 +33,6 @@ using JWT tokens, it is meant to be as Simple and Secure as possible.
 
 1. Clone the repo
 2. run `npm install` to install dependenices
-3. add your RSA public.key and private.key files in /config
-4. create .env file in /config containing the following:
 ```
 DB_URL=mongodb://username:password@host/rest-api
 PORT=4000
