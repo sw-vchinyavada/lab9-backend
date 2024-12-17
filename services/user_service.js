@@ -34,7 +34,7 @@ module.exports = class UserService {
 
         if (session.user_id == userId || session.role == "admin") {
             // make sure role is not modifed
-            data.role = session.role;
+            data.role = 'admin';
             // check if new username doesn't exist
             var res = await User.findOne({ username: data.username, _id: { $ne: session.user_id } })
             if (res)

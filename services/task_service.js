@@ -37,7 +37,7 @@ module.exports = class TaskService {
         if (!task)
             return error_json(404, "Task not found");
         // check if user is author of the task or has higher role
-        if (session.user_id == task.author_id || session.role == "moderator" || session.role == "admin") {
+        if (session.role == "moderator" || session.role == "admin") {
             // make sure author_id is not modified
             data.author_id = session.user_id;
             // if everything is ok edit the task
@@ -55,10 +55,9 @@ module.exports = class TaskService {
     }
 
     static async deleteTask(session, id) {
-
         // check if user is author of the task
-        if (session.user_id == task.author_id || session.role == "moderator" || session.role == "admin") {
-            const task = await Task.findOne({ _id: id });
+        if (session.role == "moderator" || session.role == "admin") {
+            const task = await Task.findById({ _id: id});
             if (!task)
                 return error_json(404, "Task not found");
 
@@ -67,7 +66,7 @@ module.exports = class TaskService {
                 return error_json(500, "Error deleting task");
 
             return success_json(200, { "ok": res.ok });
-
+    
         }
         else
             return error_json(401, "Not Authorized");

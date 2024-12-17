@@ -18,11 +18,7 @@ const TaskSchema = new Schema({
 	dueDate: {
 		type: String,
 		required: [true, "Due Date field is required"]
-	},
-	time: {
-		type: String,
-		required: [true, "Time field is required"]
-	},
+	}
 }, { versionKey: false, timestamps: true });
 
 const Task = mongoose.model('task', TaskSchema);

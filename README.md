@@ -22,11 +22,11 @@ using JWT tokens, it is meant to be as Simple and Secure as possible.
 
 | Post | Parameters |
 |:----:|:-----:|
-| POST /api/post | title,content,tags,categories |
-| PUT /api/post/:id | title,content,tags,categories |
-| DELETE /api/post/:id | x |
-| GET /api/post/:id | x |
-| GET /api/posts | page,tag,category,author_id |
+| POST /api/task | title,status,priority,dueDate |
+| PUT /api/task/:id | title,status,priority,dueDate |
+| DELETE /api/task/:id | x |
+| GET /api/task/:id | x |
+| GET /api/tasks ||
 
 
 # How to install
@@ -41,9 +41,3 @@ PORT=4000
 ```
 make sure to change host,username,password according to your mongodb config
 5. Finally, start it with `npm start`
-
-
-```
-vchinyavada
-FJOUewca3DTxKxSG
-```

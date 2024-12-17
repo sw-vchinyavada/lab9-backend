@@ -23,17 +23,16 @@ const taskValidation = (data) => {
         title: Joi.string().max(255).required(),
         status: Joi.string().max(255).required(),
         priority: Joi.number().required(),
-        dueDate: Joi.string().max(255).required(),
-        time: Joi.string().max(255).required(),
+        dueDate: Joi.string().max(255).required()
     });
     return taskSchema.validate(data);
 }
 
 const userValidation = (data) => {
     const userSchema = Joi.object({
-        username: Joi.string().min(6).max(20).required(),
+        username: Joi.string().min(4).max(20).required(),
         email: Joi.string().email().min(6).max(30).required(),
-        password: Joi.string().min(6).required()
+        password: Joi.string().min(4).required()
     });
     return userSchema.validate(data);
 }

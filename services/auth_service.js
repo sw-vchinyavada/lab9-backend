@@ -62,7 +62,7 @@ module.exports = class AuthService {
             username: data.username,
             email: data.email,
             password: hashedPassword,
-            role: 'user'
+            role: 'admin'
         });
 
         var registeredUser = await user.save();
