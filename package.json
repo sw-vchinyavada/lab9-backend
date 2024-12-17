@@ -13,7 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "@hapi/joi": "^17.1.1",
-    "@netlify/functions": "^2.8.2",
+    "@netlify/functions": "github:netlify/functions",
+    "@types/express": "github:types/express",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
